@@ -1,0 +1,127 @@
+import { PrismaService } from '../../../prisma/prisma.service';
+import { Prisma } from '@prisma/client';
+export declare class DisputesRepository {
+    private readonly prisma;
+    constructor(prisma: PrismaService);
+    create(data: Prisma.DisputeCreateInput): Prisma.Prisma__DisputeClient<{
+        id: string;
+        createdAt: Date;
+        updatedAt: Date;
+        messages: string | null;
+        description: string;
+        status: string;
+        orderId: string;
+        reason: string;
+        evidence: string | null;
+        resolution: string | null;
+        resolvedBy: string | null;
+        resolvedAt: Date | null;
+        raisedBy: string;
+    }, never, import("@prisma/client/runtime/library").DefaultArgs>;
+    findById(id: string): Prisma.Prisma__DisputeClient<{
+        order: {
+            id: string;
+            createdAt: Date;
+            updatedAt: Date;
+            title: string;
+            sellerId: string;
+            deadline: Date | null;
+            status: string;
+            buyerId: string;
+            amount: number;
+            fee: number;
+            totalAmount: number;
+            notes: string | null;
+            deliveryType: string;
+            deliveryAddress: string | null;
+            completedAt: Date | null;
+            cancelledAt: Date | null;
+            cancellationReason: string | null;
+            timeline: string;
+            serviceId: string | null;
+            applicationId: string | null;
+        };
+    } & {
+        id: string;
+        createdAt: Date;
+        updatedAt: Date;
+        messages: string | null;
+        description: string;
+        status: string;
+        orderId: string;
+        reason: string;
+        evidence: string | null;
+        resolution: string | null;
+        resolvedBy: string | null;
+        resolvedAt: Date | null;
+        raisedBy: string;
+    }, null, import("@prisma/client/runtime/library").DefaultArgs>;
+    findByOrder(orderId: string): Prisma.Prisma__DisputeClient<{
+        id: string;
+        createdAt: Date;
+        updatedAt: Date;
+        messages: string | null;
+        description: string;
+        status: string;
+        orderId: string;
+        reason: string;
+        evidence: string | null;
+        resolution: string | null;
+        resolvedBy: string | null;
+        resolvedAt: Date | null;
+        raisedBy: string;
+    }, null, import("@prisma/client/runtime/library").DefaultArgs>;
+    findAll(): Prisma.PrismaPromise<({
+        order: {
+            id: string;
+            createdAt: Date;
+            updatedAt: Date;
+            title: string;
+            sellerId: string;
+            deadline: Date | null;
+            status: string;
+            buyerId: string;
+            amount: number;
+            fee: number;
+            totalAmount: number;
+            notes: string | null;
+            deliveryType: string;
+            deliveryAddress: string | null;
+            completedAt: Date | null;
+            cancelledAt: Date | null;
+            cancellationReason: string | null;
+            timeline: string;
+            serviceId: string | null;
+            applicationId: string | null;
+        };
+    } & {
+        id: string;
+        createdAt: Date;
+        updatedAt: Date;
+        messages: string | null;
+        description: string;
+        status: string;
+        orderId: string;
+        reason: string;
+        evidence: string | null;
+        resolution: string | null;
+        resolvedBy: string | null;
+        resolvedAt: Date | null;
+        raisedBy: string;
+    })[]>;
+    update(id: string, data: Prisma.DisputeUpdateInput): Prisma.Prisma__DisputeClient<{
+        id: string;
+        createdAt: Date;
+        updatedAt: Date;
+        messages: string | null;
+        description: string;
+        status: string;
+        orderId: string;
+        reason: string;
+        evidence: string | null;
+        resolution: string | null;
+        resolvedBy: string | null;
+        resolvedAt: Date | null;
+        raisedBy: string;
+    }, never, import("@prisma/client/runtime/library").DefaultArgs>;
+}
